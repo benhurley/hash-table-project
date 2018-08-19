@@ -40,7 +40,7 @@ This action will prompt the user for the password file name to load from and the
 
 Easiest way to use this function is to add users manually the first time, [write to a new password file](#write-to-password-file), and then load that new file back in.
 
-I included [test_load.txt](#test_load.txt) as an example. You will have to move from tests directory into same directory as the executable for the program to be able to find it.
+I included [test_load.txt](#test-load) as an example. You will have to move from tests directory into same directory as the executable for the program to be able to find it.
 
 #### Add User
 This action will allow you to manually add a user to the system. Enter a username followed by a password for the user. Will respond with "User Added" if done correctly. The hash table can be [dumped](#dump-hash-table) afterwards to see the new user in the table.
@@ -60,7 +60,7 @@ This action prints the contents of the hash table to the console. You will be ab
 #### Hash Table Size
 This action prints the size of the hash table to the screen (Size being number of users entered into the system).
 
-#### Write to Password file
+#### Write to Password File
 This action writes the contents of the hash table into a file. The desired filename should be given.
 
 **Note: This action will overwrite a file if the name given matches the name of a file in the working directory. A new file name is recommended.**
@@ -92,7 +92,7 @@ Linux glibc uses the salt of the password to determine the type of hash generate
           6   | SHA-512 (since glibc 2.7)
 ```
 
-The Linux crypt function lives in <crypt.h>, which differs now from other operating systems. This project was oringially built to be linux-specific, but was recently modified to also work on [macOS](#macOS).
+The Linux crypt function lives in <crypt.h>, which differs now from other operating systems. This project was oringially built to be linux-specific, but was recently modified to also work on mac.
 
 The program currently uses the MD5 encryption algorithm (ID 1) on Linux and creates a 22-character string for the hashed password. 
 
@@ -111,11 +111,13 @@ Two different tests have been included in the /tests directory.
 
 **Note: The tests should be moved back into the same directory as the executable when desired Otherwise they will not be found.**
 
-#### test_load.txt
-This text file can be used while the program is running to [load users into the hash table](#load-user-data-from-file). This will load six example users into the hash table.
+#### Test Load
+The test_load.txt file in /tests can be used while the program is running to [load users into the hash table](#load-user-data-from-file). This will load six example users into the hash table.
 
-#### test_input.txt
-This text file can be passed into the executable as input to replace keyboard entries. I would also recommend redirecting the output into a new text file.
+#### Test Input
+The test_input.txt file in /tests can be passed into the executable prior to running to replace the required keyboard entries. I would also recommend redirecting the output into a new text file.
+
+**Note: This action will overwrite a file if the name given matches the name of a file in the working directory. A new file name is recommended.**
 
 Example run
 ```
