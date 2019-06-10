@@ -6,7 +6,7 @@ This project simulates how usernames and passwords are hashed, stored, and manag
 
 To get started, grab the https link above and clone this repo to your local machine
 ```
-git clone https://github.com/thebenhurley/hash-table-project.git
+git clone https://github.com/benhurley/hash-table-project.git
 ```
 
 Next, run a g++ build locally using the makefile included in the project
